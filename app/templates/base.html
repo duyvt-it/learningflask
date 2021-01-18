@@ -1,26 +1,14 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div>
-        Vo The Duy:
-        <a href="{{ url_for('index') }}">Home</a>
-        <a href="{{ url_for('login') }}">Login</a>
-    </div>
-    <hr>
-    {% with messages = get_flashed_messages() %}
-        {% if messages %}
-        <ul>
-            {% for message in messages %}
-            <li>{{ message }}</li>
-            {% endfor %}
-        </ul>
-        {% endif %}
-    {% endwith %}
-    {% block content %}{% endblock %}
-</body>
+<html>
+    <head>
+      {% if title %}
+      <title>{{ title }} - Myblog</title>
+      {% else %}
+      <title>Welcome to Myblog</title>
+      {% endif %}
+    </head>
+    <body>
+        <div>Myblog: <a href="/index">Home</a></div>
+        <hr>
+        {% block content %}{% endblock %}
+    </body>
 </html>
