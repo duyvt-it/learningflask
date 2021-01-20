@@ -1,6 +1,8 @@
 {
     "python.pythonPath": "/home/duyvt/anaconda3/envs/blog/bin/python",
     "cSpell.ignoreWords": [
+        "identicon",
+        "unfollow",
         "werkzeug"
     ]
 }
